@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Steps to run the Project:
 
 contactDirectory> npm install
+
 contactDirectory> ng serve
 
 Steps to run json server:
