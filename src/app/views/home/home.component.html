@@ -1,0 +1,13 @@
+<div class="container">
+  <header class="container_header">
+    <label>LOGO</label>
+    <ul class="container_header__nav-links">
+      <li [routerLink]="['/']">CONTACT LIST</li>
+      <li [routerLink]="['/addContact']">ADD DETAILS</li>
+    </ul>
+  </header>
+  <div class="container_content">
+    <router-outlet></router-outlet>
+  </div>
+  <footer class="container_footer"></footer>
+</div>

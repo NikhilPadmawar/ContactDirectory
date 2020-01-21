@@ -1,0 +1,52 @@
+<div class="contactForm">
+  <input type="text" [(ngModel)]="search" placeholder="Search..." />
+  <table>
+    <caption>
+      CONTACT DIRECTORY
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">Phone No.</th>
+        <th scope="col">Status</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="
+          let x of showContactDetails | searchContact: search;
+          let i = index
+        "
+      >
+        <td>{{ x.firstName }}</td>
+        <td>{{ x.lastName }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone }}</td>
+        <td>{{ x.status }}</td>
+        <td>
+          <button
+            [id]="x.id"
+            type="button"
+            class="btn btn-info btn-sm"
+            (click)="editContact(x.id)"
+          >
+            Edit
+          </button>
+        </td>
+        <td>
+          <button
+            type="button"
+            class="btn btn-danger btn-sm"
+            (click)="deleteContact(x.id)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

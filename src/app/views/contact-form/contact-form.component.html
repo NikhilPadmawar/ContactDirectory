@@ -1,0 +1,110 @@
+<div class="container">
+  <caption>
+    {{title}}
+  </caption>
+  <form
+    [formGroup]="contactDetails"
+    class="form"
+    (submit)="submitForm(contactDetails)"
+    autocomplete="off"
+  >
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="firstName"
+        formControlName="firstName"
+        [(ngModel)]="example.firstName"
+        required
+      />
+      <div
+        class="check"
+        *ngIf="
+          contactDetails.controls['firstName'].errors &&
+          (contactDetails.controls['firstName'].touched ||
+            contactDetails.controls['firstName'].dirty)
+        "
+      >
+        FirstName is required
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="lastName"
+        formControlName="lastName"
+        [(ngModel)]="example.lastName"
+        required
+      />
+      <div
+        class="check"
+        *ngIf="
+          contactDetails.controls['lastName'].errors &&
+          (contactDetails.controls['lastName'].touched ||
+            contactDetails.controls['lastName'].dirty)
+        "
+      >
+        LastName is required
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="email"
+        placeholder="email"
+        formControlName="email"
+        [(ngModel)]="example.email"
+        required
+      />
+      <div
+        class="check"
+        *ngIf="
+          contactDetails.controls['email'].errors &&
+          (contactDetails.controls['email'].touched ||
+            contactDetails.controls['email'].dirty)
+        "
+      >
+        Email is required
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="phone"
+        formControlName="phone"
+        [(ngModel)]="example.phone"
+        required
+      />
+      <div
+        class="check"
+        *ngIf="
+          contactDetails.controls['phone'].errors &&
+          (contactDetails.controls['phone'].touched ||
+            contactDetails.controls['phone'].dirty)
+        "
+      >
+        Phone Number is required
+      </div>
+    </div>
+    <div>
+      <button
+        id="submit"
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!contactDetails.valid"
+      >
+        Submit
+      </button>
+      <button
+        id="reset"
+        type="reset"
+        class="btn btn-secondary"
+        (click)="resetForm()"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+</div>
