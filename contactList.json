@@ -1,0 +1,44 @@
+{
+  "directory": [
+    {
+      "firstName": "Raju",
+      "lastName": "Rastogi",
+      "email": "raju.rastogi@gmail.com",
+      "phone": "1111111111",
+      "status": "Active",
+      "id": 1
+    },
+    {
+      "firstName": "john ",
+      "lastName": "cena",
+      "email": "cena.john@gmail.com",
+      "phone": "8888888888",
+      "status": "Active",
+      "id": 2
+    },
+    {
+      "firstName": "Virat",
+      "lastName": "Kohli",
+      "email": "virat.kohli@gmail.com",
+      "phone": "9999999999",
+      "status": "Active",
+      "id": 3
+    },
+    {
+      "firstName": "deepika ",
+      "lastName": "padukone",
+      "email": "deepika@gmail.com",
+      "phone": "4444444444",
+      "status": "Active",
+      "id": 4
+    },
+    {
+      "firstName": "hrithik ",
+      "lastName": "roshan",
+      "email": "hrithik.roshan@gmail.com",
+      "phone": "2222222222",
+      "status": "Active",
+      "id": 5
+    }
+  ]
+}
